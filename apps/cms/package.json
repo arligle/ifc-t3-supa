@@ -1,0 +1,52 @@
+{
+  "name": "@acme/cms",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "devturbo": "cross-env NODE_OPTIONS=--no-deprecation next dev --turbo",
+    "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
+    "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
+    "ci": "payload migrate && pnpm build",
+    "generate:types": "payload generate:types",
+    "standalone-script": "node ./src/scripts/standalone-script.js"
+  },
+  "dependencies": {
+    "@acme/db": "workspace:*",
+    "@acme/ui": "workspace:*",
+    "@acme/validators": "workspace:*",
+    "@payloadcms/db-postgres": "3.0.0-beta.36",
+    "@payloadcms/next": "3.0.0-beta.36",
+    "@payloadcms/richtext-lexical": "3.0.0-beta.36",
+    "@payloadcms/richtext-slate": "3.0.0-beta.36",
+    "@payloadcms/ui": "3.0.0-beta.36",
+    "cross-env": "^7.0.3",
+    "graphql": "^16.8.1",
+    "next": "15.0.0-rc.0",
+    "payload": "3.0.0-beta.36",
+    "react": "19.0.0-rc-f994737d14-20240522",
+    "react-dom": "19.0.0-rc-f994737d14-20240522",
+    "sharp": "0.32.6",
+    "babel-plugin-react-compiler": "^0.0.0-experimental-592953e-20240517"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:*",
+    "@acme/prettier-config": "workspace:*",
+    "@acme/tailwind-config": "workspace:*",
+    "@acme/tsconfig": "workspace:*",
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "dotenv-cli": "^7.4.2",
+    "eslint": "^9.2.0",
+    "jiti": "^1.21.0",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
+  },
+  "prettier": "@acme/prettier-config"
+}
