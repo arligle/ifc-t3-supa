@@ -20,7 +20,9 @@ export default function Navbar() {
       <div className="ms-auto flex items-center gap-x-2 md:col-span-3">
         <div className="flex items-center gap-x-2">
           <Button>登录</Button>
-          <Button variant="secondary">注册</Button>
+          <Button className=" border-2" variant="secondary">
+            注册
+          </Button>
         </div>
         <div className="md:hidden">
           <MobileMenu />

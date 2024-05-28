@@ -39,6 +39,7 @@ export default function Home() {
             欢迎使用产品信息管理系统，这是一个产品信息管理系统的示例页面，您可以在这里查看产品信息，添加产品信息，编辑产品信息，删除产品信息等操作。
           </p>
           <div className="mt-6 flex flex-col gap-4 sm:flex-row">
+            <Link href="/auth-server">Auth Server</Link>
             <Link href="/products" className={buttonVariants()}>
               Payload CMS
             </Link>

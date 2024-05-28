@@ -1,12 +1,13 @@
 import type { Viewport } from "next";
 
 import { cn } from "@acme/ui";
-import { Toaster } from "@acme/ui/toast";
 
 import "~/styles/globals.css";
 
+import { Toaster } from "@acme/ui/toaster";
+
 import { Background } from "~/components/layouts/background";
-import { Topbar } from "~/components/layouts/topbar";
+import { Header } from "~/components/layouts/header";
 import Navbar from "~/components/nav/navbar";
 import { constructMetadata } from "~/lib/utils";
 import { fontSans } from "~/lib/utils/fonts";
@@ -36,9 +37,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <Background />
         <div className="flex min-h-screen flex-col justify-between">
-          <Topbar>
+          <Header>
             <Navbar />
-          </Topbar>
+          </Header>
           {children}
 
           <Toaster />
