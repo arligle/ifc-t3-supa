@@ -1,7 +1,7 @@
 import type { Viewport } from "next";
 
 import { cn } from "@acme/ui";
-import { Toaster } from "@acme/ui/toast";
+import { Toaster } from "@acme/ui/toaster";
 
 import "~/styles/globals.css";
 
@@ -34,7 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontSans.className,
         )}
       >
-        <Background />
+        {/* <Background /> */}
         <div className="flex min-h-screen flex-col justify-between">
           <Topbar>
             <Navbar />
