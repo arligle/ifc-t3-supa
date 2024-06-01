@@ -378,6 +378,9 @@ importers:
 
   apps/supa-starter:
     dependencies:
+      '@acme/supabase-utils':
+        specifier: workspace:*
+        version: link:../../packages/supabase-utils
       '@acme/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -445,6 +448,9 @@ importers:
 
   apps/supa-utility:
     dependencies:
+      '@acme/supabase-utils':
+        specifier: workspace:*
+        version: link:../../packages/supabase-utils
       '@acme/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -543,6 +549,37 @@ importers:
       drizzle-kit:
         specifier: ^0.21.1
         version: 0.21.4
+      eslint:
+        specifier: ^9.2.0
+        version: 9.2.0
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+
+  packages/supabase-utils:
+    dependencies:
+      '@supabase/ssr':
+        specifier: latest
+        version: 0.3.0(@supabase/supabase-js@2.43.4(bufferutil@4.0.8)(utf-8-validate@6.0.3))
+      '@supabase/supabase-js':
+        specifier: latest
+        version: 2.43.4(bufferutil@4.0.8)(utf-8-validate@6.0.3)
+      '@t3-oss/env-nextjs':
+        specifier: ^0.10.1
+        version: 0.10.1(typescript@5.4.5)(zod@3.23.8)
+    devDependencies:
+      '@acme/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
+      '@acme/prettier-config':
+        specifier: workspace:*
+        version: link:../../tooling/prettier
+      '@acme/tsconfig':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
       eslint:
         specifier: ^9.2.0
         version: 9.2.0
@@ -10254,7 +10291,7 @@ snapshots:
       semver: 7.6.0
       strip-ansi: 5.2.0
       wcwidth: 1.0.1
-      yaml: 2.4.1
+      yaml: 2.4.2
     transitivePeerDependencies:
       - encoding
     optional: true
@@ -13528,7 +13565,7 @@ snapshots:
       '@types/stack-utils': 2.0.3
       chalk: 4.1.2
       graceful-fs: 4.2.11
-      micromatch: 4.0.5
+      micromatch: 4.0.7
       pretty-format: 29.7.0
       slash: 3.0.0
       stack-utils: 2.0.6
@@ -13618,7 +13655,7 @@ snapshots:
       chalk: 4.1.2
       flow-parser: 0.206.0
       graceful-fs: 4.2.11
-      micromatch: 4.0.5
+      micromatch: 4.0.7
       neo-async: 2.6.2
       node-dir: 0.1.17
       recast: 0.21.5
@@ -14005,7 +14042,7 @@ snapshots:
       graceful-fs: 4.2.11
       invariant: 2.2.4
       jest-worker: 29.7.0
-      micromatch: 4.0.5
+      micromatch: 4.0.7
       node-abort-controller: 3.1.1
       nullthrows: 1.1.1
       walker: 1.0.8

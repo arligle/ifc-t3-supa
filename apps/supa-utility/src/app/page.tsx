@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/require-await */
 import HorizontalLine from "@/components/horizontal-line";
-import { createClient } from "@/utils/supabase/server";
+
+import { createServerSideClient as createClient } from "@acme/supabase-utils";
 
 import AuthButton from "../components/AuthButton";
 
 export default async function HomePage() {
   const canInitSupabaseClient = () => {
-    // This function is just for the interactive tutorial.
     // Feel free to remove it once you have Supabase connected.
     try {
       createClient();
@@ -30,11 +30,11 @@ export default async function HomePage() {
           )}
         </div>
       </nav>
-      <HorizontalLine />
-      {/* 
+
       <div className="flex max-w-4xl flex-1 flex-col gap-20 px-3 opacity-0 animate-in">
-        <Header />
-      </div> */}
+        <h1>Hello Supabase!</h1>
+      </div>
+      <HorizontalLine />
     </div>
   );
 }

@@ -11,10 +11,11 @@
     "lint": "eslint",
     "start": "pnpm with-env next start",
     "typecheck": "tsc --noEmit",
-    "with-env": "dotenv -e ./.env --"
+    "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
     "@acme/ui": "workspace:*",
+    "@acme/supabase-utils": "workspace:*",
     "@t3-oss/env-nextjs": "^0.10.1",
     "@supabase/ssr": "latest",
     "@supabase/supabase-js": "latest",
