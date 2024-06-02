@@ -1,6 +1,6 @@
-import { createClient } from '@/utils/supabase/server';
-import Link from 'next/link';
-import React from 'react';
+import React from "react";
+import Link from "next/link";
+import { createClient } from "@/utils/supabase/server";
 
 export const AuthButtons = async () => {
   const supabase = createClient();
@@ -23,7 +23,7 @@ export const AuthButtons = async () => {
       </Link>
       <Link
         href="/signup"
-        className="text-sm font-semibold leading-6 text-gray-200 rounded-md border border-indigo-500 py-2 px-6 hover:border-indigo-300"
+        className="rounded-md border border-indigo-500 px-6 py-2 text-sm font-semibold leading-6 text-gray-200 hover:border-indigo-300"
       >
         Signup
       </Link>

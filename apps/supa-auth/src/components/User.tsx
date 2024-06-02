@@ -1,5 +1,5 @@
-import { createClient } from '@/utils/supabase/server';
-import { redirect } from 'next/navigation';
+import { redirect } from "next/navigation";
+import { createClient } from "@/utils/supabase/server";
 
 export default async function User() {
   const supabase = createClient();
@@ -9,19 +9,19 @@ export default async function User() {
   } = await supabase.auth.getSession();
 
   const signOut = async () => {
-    'use server';
+    "use server";
 
     const supabase = createClient();
     await supabase.auth.signOut();
-    return redirect('/login');
+    return redirect("/login");
   };
 
   return (
     session && (
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 animate-in">
         Hey, {session.user.email}!
         <form action={signOut}>
-          <button className="py-2 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover">
+          <button className="bg-btn-background hover:bg-btn-background-hover rounded-md px-4 py-2 no-underline">
             Logout
           </button>
         </form>

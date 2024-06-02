@@ -2,7 +2,9 @@ import { headers } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import Header from "@/components/Header/Header";
-import { createClient } from "@/utils/supabase/server";
+
+// import { createClient } from "@/utils/supabase/server";
+import { createServerSideClient as createClient } from "@acme/supabase-utils";
 
 export default async function Signup({
   searchParams,

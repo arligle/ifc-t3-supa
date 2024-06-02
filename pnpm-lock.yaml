@@ -317,6 +317,9 @@ importers:
 
   apps/supa-auth:
     dependencies:
+      '@acme/supabase-utils':
+        specifier: workspace:*
+        version: link:../../packages/supabase-utils
       '@acme/ui':
         specifier: workspace:*
         version: link:../../packages/ui
