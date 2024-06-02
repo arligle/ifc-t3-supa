@@ -32,7 +32,10 @@ export default async function HomePage() {
       </nav>
 
       <div className="flex max-w-4xl flex-1 flex-col gap-20 px-3 opacity-0 animate-in">
-        <h1>Hello Supabase!</h1>
+        <h1>
+          Hello <span className=" text-green-600">Supa-Starter !</span>
+          Let's get started from here !
+        </h1>
       </div>
       <HorizontalLine />
     </div>

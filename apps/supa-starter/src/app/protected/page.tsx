@@ -22,7 +22,7 @@ export default async function ProtectedPage() {
             <AuthButton />
           </div>
         </nav>
-        <div className=" bg-green-600 py-6 text-center font-bold">
+        <div className=" bg-green-600 py-6 text-center font-bold animate-in">
           这是一个受保护的页面，能看到它表示您已经通过身份验证！
         </div>
       </div>
